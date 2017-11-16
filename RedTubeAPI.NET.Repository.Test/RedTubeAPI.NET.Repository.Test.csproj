@@ -32,9 +32,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Test.cs" />
+    <Compile Include="WebRepository\Json\StarWebRepositoryTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="WebRepository\" />
+    <Folder Include="WebRepository\Json\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RedTubeAPI.NET.Repository\RedTubeAPI.NET.Repository.csproj">
+      <Project>{4FBF82A8-6EF2-49B8-B8EF-B9605A212376}</Project>
+      <Name>RedTubeAPI.NET.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
