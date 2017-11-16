@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedTubeAPI.NET.Repository.Test", "RedTubeAPI.NET.Repository.Test\RedTubeAPI.NET.Repository.Test.csproj", "{82905B5F-1080-4A5A-BAC7-02C4165AA836}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedTubeAPI.NET.Repository", "RedTubeAPI.NET.Repository\RedTubeAPI.NET.Repository.csproj", "{4FBF82A8-6EF2-49B8-B8EF-B9605A212376}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82905B5F-1080-4A5A-BAC7-02C4165AA836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82905B5F-1080-4A5A-BAC7-02C4165AA836}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82905B5F-1080-4A5A-BAC7-02C4165AA836}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82905B5F-1080-4A5A-BAC7-02C4165AA836}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FBF82A8-6EF2-49B8-B8EF-B9605A212376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FBF82A8-6EF2-49B8-B8EF-B9605A212376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FBF82A8-6EF2-49B8-B8EF-B9605A212376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FBF82A8-6EF2-49B8-B8EF-B9605A212376}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
