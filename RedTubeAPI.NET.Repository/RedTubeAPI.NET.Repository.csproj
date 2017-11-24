@@ -28,6 +28,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Web" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -37,17 +38,13 @@
     <Compile Include="Model\Star.cs" />
     <Compile Include="WebRepository\IStarRepository.cs" />
     <Compile Include="WebRepository\Json\StarWebRepository.cs" />
-    <Compile Include="Config\IConfiguration.cs" />
-    <Compile Include="Config\AppConfig\AppConfigSection.cs" />
-    <Compile Include="Config\AppConfig\AppConfig.cs" />
-    <Compile Include="Config\ConfigurationManager.cs" />
-    <Compile Include="Config\IConfigContainer.cs" />
+    <Compile Include="ContentType.cs" />
+    <Compile Include="WebRepository\Json\IJsonParser.cs" />
+    <Compile Include="WebRepository\Json\JsonParser.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="WebRepository\" />
     <Folder Include="WebRepository\Json\" />
-    <Folder Include="Config\" />
-    <Folder Include="Config\AppConfig\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
