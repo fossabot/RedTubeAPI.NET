@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6D915A75-853B-4F57-A82D-E70F3521EC55}</ProjectGuid>
+    <ProjectGuid>{593638AB-A818-469D-8589-47133D26EBD5}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>RTARepository.Web.Test</RootNamespace>
-    <AssemblyName>RTARepository.Web.Test</AssemblyName>
+    <RootNamespace>RTARepository.Web</RootNamespace>
+    <AssemblyName>RTARepository.Web</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -17,33 +17,32 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="System.Configuration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IJsonParser.cs" />
+    <Compile Include="JsonParser.cs" />
+    <Compile Include="StarWebRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StarWebRepositoryTest.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="RTARepository.Web\RTARepository.Web.csproj">
-      <Project>{593638AB-A818-469D-8589-47133D26EBD5}</Project>
-      <Name>RTARepository.Web</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RedTubeAPI.NET.Repository\RTARepository.csproj">
+    <ProjectReference Include="..\..\RTARepository\RTARepository\RTARepository.csproj">
       <Project>{4FBF82A8-6EF2-49B8-B8EF-B9605A212376}</Project>
       <Name>RTARepository</Name>
     </ProjectReference>

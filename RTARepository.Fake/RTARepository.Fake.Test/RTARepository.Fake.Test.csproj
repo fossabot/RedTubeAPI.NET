@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{593638AB-A818-469D-8589-47133D26EBD5}</ProjectGuid>
+    <ProjectGuid>{1F04BA9A-9B79-4233-99CE-3AF7C5D07616}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>RTARepository.Web</RootNamespace>
-    <AssemblyName>RTARepository.Web</AssemblyName>
+    <RootNamespace>RTARepository.Fake.Test</RootNamespace>
+    <AssemblyName>RTARepository.Fake.Test</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -17,35 +17,36 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="IJsonParser.cs" />
-    <Compile Include="JsonParser.cs" />
-    <Compile Include="StarWebRepository.cs" />
+    <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\RedTubeAPI.NET.Repository\RTARepository.csproj">
+    <Compile Include="FakeRepositoryTest.cs" />
+    <Compile Include="FakeStarRepositoryTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RTARepository.Fake4Tests\RTARepository.Fake4Tests.csproj">
+      <Project>{2F241FF1-2233-414F-AD54-8AACE9078598}</Project>
+      <Name>RTARepository.Fake4Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RTARepository\RTARepository\RTARepository.csproj">
       <Project>{4FBF82A8-6EF2-49B8-B8EF-B9605A212376}</Project>
       <Name>RTARepository</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

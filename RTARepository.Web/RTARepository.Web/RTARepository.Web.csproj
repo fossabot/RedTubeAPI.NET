@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2F241FF1-2233-414F-AD54-8AACE9078598}</ProjectGuid>
+    <ProjectGuid>{593638AB-A818-469D-8589-47133D26EBD5}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>RTARepository.Fake4Tests</RootNamespace>
-    <AssemblyName>RTARepository.Fake4Tests</AssemblyName>
+    <RootNamespace>RTARepository.Web</RootNamespace>
+    <AssemblyName>RTARepository.Web</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -28,14 +28,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FakeRepositoryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FakeStarRepository.cs" />
+    <Compile Include="IJsonParser.cs" />
+    <Compile Include="JsonParser.cs" />
+    <Compile Include="StarWebRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RedTubeAPI.NET.Repository\RTARepository.csproj">
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\RTARepository\RTARepository\RTARepository.csproj">
       <Project>{4FBF82A8-6EF2-49B8-B8EF-B9605A212376}</Project>
       <Name>RTARepository</Name>
     </ProjectReference>
