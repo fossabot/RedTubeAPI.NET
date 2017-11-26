@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RedTubeAPI.NET.Repository.WebRepository
+namespace RedTubeApi.Repository
 {
     public interface IStarRepository 
     {
-        IEnumerable<Star> ListAll();
+        IEnumerable<Star> ListAllStars();
     }
 }

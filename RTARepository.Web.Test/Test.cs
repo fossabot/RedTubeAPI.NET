@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
-namespace RedTubeAPI.NET.Repository.Test
+namespace RTARepository.Web.Test
 {
     [TestFixture()]
     public class Test

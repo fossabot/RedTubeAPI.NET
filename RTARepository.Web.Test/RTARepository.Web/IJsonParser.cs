@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RedTubeAPI.NET.Repository
+namespace RedTubeApi.Repository.Web
 {
     /// <summary>
     /// Provides methods for parsing Json

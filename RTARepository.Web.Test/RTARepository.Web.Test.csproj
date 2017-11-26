@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{82905B5F-1080-4A5A-BAC7-02C4165AA836}</ProjectGuid>
+    <ProjectGuid>{6D915A75-853B-4F57-A82D-E70F3521EC55}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>RedTubeAPI.NET.Repository.Test</RootNamespace>
-    <AssemblyName>RedTubeAPI.NET.Repository.Test</AssemblyName>
+    <RootNamespace>RTARepository.Web.Test</RootNamespace>
+    <AssemblyName>RTARepository.Web.Test</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -29,22 +29,23 @@
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Test.cs" />
-    <Compile Include="WebRepository\Json\StarWebRepositoryTest.cs" />
+    <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="WebRepository\" />
-    <Folder Include="WebRepository\Json\" />
+    <Compile Include="StarWebRepositoryTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RedTubeAPI.NET.Repository\RedTubeAPI.NET.Repository.csproj">
+    <ProjectReference Include="RTARepository.Web\RTARepository.Web.csproj">
+      <Project>{593638AB-A818-469D-8589-47133D26EBD5}</Project>
+      <Name>RTARepository.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RedTubeAPI.NET.Repository\RTARepository.csproj">
       <Project>{4FBF82A8-6EF2-49B8-B8EF-B9605A212376}</Project>
-      <Name>RedTubeAPI.NET.Repository</Name>
+      <Name>RTARepository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

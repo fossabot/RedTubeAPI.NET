@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json.Linq;
 
-namespace RedTubeAPI.NET.Repository
+namespace RedTubeApi.Repository.Web
 {
     public class JsonParser : IJsonParser
     {

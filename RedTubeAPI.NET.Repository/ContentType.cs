@@ -1,5 +1,5 @@
 ﻿using System;
-namespace RedTubeAPI.NET.Repository
+namespace RedTubeApi.Repository
 {
     public enum ContentType
     {

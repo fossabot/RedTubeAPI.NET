@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 
-namespace RedTubeAPI.NET.Repository.WebRepository.Json
-{
+namespace RedTubeApi.Repository.Web {
+                    
     public class StarWebRepository : IStarRepository
     {
         private Uri ApiBaseUri { get; set; }
@@ -19,9 +19,9 @@ namespace RedTubeAPI.NET.Repository.WebRepository.Json
 
 
 
+
         private string CallApiMethod(Uri uri) {
-
-
+            
             var webRequest = (HttpWebRequest)WebRequest.Create(uri);
 			webRequest.KeepAlive = false;
 			webRequest.Method = "GET";
@@ -36,27 +36,28 @@ namespace RedTubeAPI.NET.Repository.WebRepository.Json
 
 
             return responseText;
-
         }
 
 
-        public IEnumerable<Star> ListAll()
+
+
+        public IEnumerable<Star> ListAllStars()
         {
 			string apiMethod = "redtube.Stars.getStarDetailedList";
 
-            string url = String.Format(
-                "{0}?data={1}&output=={2}",
-                this.ApiBaseUri, apiMethod, this.ContentType
-            );
+			string url = String.Format(
+				"{0}?data={1}&output={2}",
+				this.ApiBaseUri, apiMethod, this.ContentType
+			);
 
 
-            var json = CallApiMethod(new Uri(url));
+			var json = CallApiMethod(new Uri(url));
 
 
-            IJsonParser jsonParser = new JsonParser();
-            return jsonParser.FindElements<Star>(
-                json, "$.stars[*].star"
-            );
+			IJsonParser jsonParser = new JsonParser();
+			return jsonParser.FindElements<Star>(
+				json, "$.stars[*].star"
+			);
         }
     }
 }
