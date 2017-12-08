@@ -16,23 +16,21 @@ namespace RedTubeApi.RepositoryRequest.Fake.Test
         public void Response_OnExecute_ContainsExpectedElements() {
             // arrange
             var request = new FakeFetchStarsRepoRequest();
-
+            var expectedNames = new string[] { "Nina, Hartley", "Raylene" };
 			// act
             var response = request.Execute();
             var oudResponseData = response.Data;
 
             // assert
+            Assert.IsNotNull(oudResponseData);
             Assert.IsNotEmpty(oudResponseData);
 
-            var names = new string[] { "Nina, Hartley", "Raylene" };
-            foreach ( string name in names ) {
-                var star = oudResponseData.FirstOrDefault((s) => s.Name.Equals(name));
+            foreach ( string expectedName in expectedNames ) {
+                var star = oudResponseData.FirstOrDefault((s) => s.Name.Equals(expectedName));
 
-                Assert.IsNotNull(star, "Expected star {0} could not be found", name);
-                Assert.AreEqual(star.Name, name);
+                Assert.IsNotNull(star, "Expected star {0} could not be found", expectedName);
+                Assert.AreEqual(star.Name, expectedName);
             }
         }
-
-
     }
 }

@@ -23,6 +23,7 @@ namespace RedTubeApi.RepositoryRequest.Fake.Test
         public void RepositoryRequest_OnGetAllStars_IsNotNull()
         {
             // arrange
+
             // act
             var oudRequest = this.Factory.GetAllStars();
 
