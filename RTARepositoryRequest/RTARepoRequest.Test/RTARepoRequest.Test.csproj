@@ -31,12 +31,35 @@
     <Reference Include="nunit.framework">
       <HintPath>..\..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\packages\Castle.Core.4.2.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepoRequestInvokerTest.cs" />
+    <Compile Include="RepoResponseTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RTARepositoryRequest\RTARepositoryRequest.csproj">
+      <Project>{BF97B22E-AB7A-4A42-813B-BB969B8A6046}</Project>
+      <Name>RTARepositoryRequest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RTARepositoryRequest.Fake\RTARepositoryRequest.Fake\RTARepositoryRequest.Fake.csproj">
+      <Project>{49BCD03B-F0A1-48AE-888E-F04FFA097D78}</Project>
+      <Name>RTARepositoryRequest.Fake</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RTARepository\RTARepository\RTARepository.csproj">
+      <Project>{4FBF82A8-6EF2-49B8-B8EF-B9605A212376}</Project>
+      <Name>RTARepository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

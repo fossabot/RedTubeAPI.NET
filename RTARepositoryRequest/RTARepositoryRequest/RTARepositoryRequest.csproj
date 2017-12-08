@@ -31,10 +31,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RepoRequest.cs" />
-    <Compile Include="RepositoryResponse.cs" />
     <Compile Include="IRepoRequestFactory.cs" />
     <Compile Include="IRepoRequestInvoker.cs" />
+    <Compile Include="RepoRequestInvoker.cs" />
+    <Compile Include="RepoResponse.cs" />
+    <Compile Include="IRepoRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\RTARepository\RTARepository\RTARepository.csproj">

@@ -5,9 +5,9 @@ using RedTubeApi.Repository;
 
 namespace RedTubeApi.RepositoryRequest.Fake
 {
-    public class FakeFetchStarsRepoRequest : RepoRequest<ICollection<Star>>
+    public class FakeFetchStarsRepoRequest : IRepoRequest<ICollection<Star>>
     {
-        public override RepoResponse<ICollection<Star>> Execute()
+        public RepoResponse<ICollection<Star>> Execute()
         {
             return new RepoResponse<ICollection<Star>>
             {
@@ -18,10 +18,7 @@ namespace RedTubeApi.RepositoryRequest.Fake
                     new Star() {
                         Name = "Raylene"
                     }
-                },
-
-                Exceptions = null,
-                Request = null
+                }
             };
         }
 

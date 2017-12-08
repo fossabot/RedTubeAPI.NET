@@ -10,7 +10,7 @@ namespace RedTubeApi.RepositoryRequest.Fake
         {
         }
 
-        public RepoRequest<ICollection<Star>> GetAllStars()
+        public IRepoRequest<ICollection<Star>> GetAllStars()
         {
             var request = new FakeFetchStarsRepoRequest();
             return request;

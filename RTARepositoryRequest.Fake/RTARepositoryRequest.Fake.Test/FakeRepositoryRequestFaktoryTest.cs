@@ -36,7 +36,7 @@ namespace RedTubeApi.RepositoryRequest.Fake.Test
         [Test]
         public void RepositoryRequest_OnGetAllStars_HasExpectedType() {
             // arrange
-            var expectedType = typeof(RepoRequest<ICollection<Star>>);
+            var expectedType = typeof(IRepoRequest<ICollection<Star>>);
 
             // act
             var request = this.Factory.GetAllStars();

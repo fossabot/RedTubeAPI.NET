@@ -3,8 +3,8 @@
 
 namespace RedTubeApi.RepositoryRequest
 {
-    public interface IRepositoryRequestInvoker
+    public interface IRepoRequestInvoker<T>
     {
-        RepositoryResponse Invoke(RepositoryRequest request);
+        RepoResponse<T> Invoke(IRepoRequest<T> request);
     }
 }
