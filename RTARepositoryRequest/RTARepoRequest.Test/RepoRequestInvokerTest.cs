@@ -37,9 +37,9 @@ namespace RedTubeApi.RepositoryRequest
             );
 
             // Mock request to throw expected exception
-            //var requestStub = MockRepository.GenerateStub<IRepoRequest<ICollection<Star>>>();
-            //requestStub.Stub(x => x.Execute()).Throw(expectedException);
-            var requestStub = new Fake.FakeFetchStarsRepoRequest();
+            var requestStub = MockRepository.GenerateStub<IRepoRequest<ICollection<Star>>>();
+            requestStub.Stub(x => x.Execute()).Throw(expectedException);
+
 
             // act & assert
             // check if exception is thrown or caught
