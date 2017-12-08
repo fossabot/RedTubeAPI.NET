@@ -5,11 +5,11 @@ using RedTubeApi.Repository;
 
 namespace RedTubeApi.RepositoryRequest.Fake
 {
-    public class FakeFetchStarsRepoRequest : RepositoryRequest<ICollection<Star>>
+    public class FakeFetchStarsRepoRequest : RepoRequest<ICollection<Star>>
     {
-        public override RepositoryResponse<ICollection<Star>> Execute()
+        public override RepoResponse<ICollection<Star>> Execute()
         {
-            return new RepositoryResponse<ICollection<Star>>
+            return new RepoResponse<ICollection<Star>>
             {
                 Data = new List<Star> {
                     new Star() {

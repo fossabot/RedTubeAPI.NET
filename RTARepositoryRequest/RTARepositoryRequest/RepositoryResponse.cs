@@ -7,12 +7,12 @@ namespace RedTubeApi.RepositoryRequest
 	/// <summary>
 	/// Counterpart of <see cref="RepositoryRequest"/>
 	/// </summary>
-	public class RepositoryResponse<T>
+	public class RepoResponse<T>
 	{
 		/// <summary>
 		/// A reference to the originating request
 		/// </summary>
-		public RepositoryRequest<T> Request { get; set; }
+		public RepoRequest<T> Request { get; set; }
 
 
 		/// <summary>

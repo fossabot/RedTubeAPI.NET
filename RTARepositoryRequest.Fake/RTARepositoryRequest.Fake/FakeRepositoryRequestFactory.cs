@@ -4,13 +4,13 @@ using RedTubeApi.Repository;
 
 namespace RedTubeApi.RepositoryRequest.Fake
 {
-    public class FakeRepositoryRequestFactory : IRepositoryRequestFactory
+    public class FakeRepositoryRequestFactory : IRepoRequestFactory
     {
         public FakeRepositoryRequestFactory()
         {
         }
 
-        public RepositoryRequest<ICollection<Star>> GetAllStars()
+        public RepoRequest<ICollection<Star>> GetAllStars()
         {
             var request = new FakeFetchStarsRepoRequest();
             return request;

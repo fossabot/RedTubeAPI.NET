@@ -3,13 +3,13 @@
 
 namespace RedTubeApi.RepositoryRequest
 {
-	public abstract class RepositoryRequest<T>
+	public abstract class RepoRequest<T>
 	{
 		/// <summary>
 		/// Command Pattern: Command
 		/// Implements the entire repository request
 		/// </summary>
-		public abstract RepositoryResponse<T> Execute ();
+		public abstract RepoResponse<T> Execute ();
 	}
 }
 

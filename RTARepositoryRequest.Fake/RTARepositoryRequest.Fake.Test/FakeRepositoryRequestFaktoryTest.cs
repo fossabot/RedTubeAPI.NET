@@ -9,7 +9,7 @@ namespace RedTubeApi.RepositoryRequest.Fake.Test
     [TestFixture]
     public class FakeRepositoryRequestFaktoryTest
     {
-        private IRepositoryRequestFactory Factory;
+        private IRepoRequestFactory Factory;
 
 
         public FakeRepositoryRequestFaktoryTest() {
@@ -36,7 +36,7 @@ namespace RedTubeApi.RepositoryRequest.Fake.Test
         [Test]
         public void RepositoryRequest_OnGetAllStars_HasExpectedType() {
             // arrange
-            var expectedType = typeof(RepositoryRequest<ICollection<Star>>);
+            var expectedType = typeof(RepoRequest<ICollection<Star>>);
 
             // act
             var request = this.Factory.GetAllStars();
