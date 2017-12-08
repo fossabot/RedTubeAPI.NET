@@ -33,7 +33,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryRequest.cs" />
     <Compile Include="RepositoryResponse.cs" />
-    <Compile Include="RepositoryRequestFactory.cs" />
+    <Compile Include="IRepositoryRequestFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\RTARepository\RTARepository\RTARepository.csproj">
+      <Project>{4FBF82A8-6EF2-49B8-B8EF-B9605A212376}</Project>
+      <Name>RTARepository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

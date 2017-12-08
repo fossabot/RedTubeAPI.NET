@@ -6,7 +6,7 @@ using RedTubeApi.RepositoryRequest.Fake;
 using System.Linq;
 
 
-namespace RedTubeApi.RepositoryRequest
+namespace RedTubeApi.RepositoryRequest.Fake.Test
 {
 
     [TestFixture]
