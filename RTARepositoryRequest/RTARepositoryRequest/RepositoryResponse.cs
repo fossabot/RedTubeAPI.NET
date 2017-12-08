@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 
+
 namespace RedTubeApi.RepositoryRequest
 {
 	/// <summary>
@@ -12,6 +13,7 @@ namespace RedTubeApi.RepositoryRequest
 		/// A reference to the originating request
 		/// </summary>
 		public RepositoryRequest<T> Request { get; set; }
+
 
 		/// <summary>
 		/// The final result of the Request

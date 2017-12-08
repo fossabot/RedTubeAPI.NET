@@ -29,7 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RTARepositoryRequest.Fake",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTARepositoryRequest.Fake", "RTARepositoryRequest.Fake\RTARepositoryRequest.Fake\RTARepositoryRequest.Fake.csproj", "{49BCD03B-F0A1-48AE-888E-F04FFA097D78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTARepositoryRequest.Fake.Test", "RTARepositoryRequest.Fake\RTARepositoryRequest.Fake.Test\RTARepositoryRequest.Fake.Test.csproj", "{D3C5FB24-62D1-422C-BB83-EE11AE3F1712}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTARepositoryRequest.Fake.Tests", "RTARepositoryRequest.Fake\RTARepositoryRequest.Fake.Test\RTARepositoryRequest.Fake.Tests.csproj", "{D3C5FB24-62D1-422C-BB83-EE11AE3F1712}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
